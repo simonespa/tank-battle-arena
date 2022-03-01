@@ -1,0 +1,50 @@
+- I package sono: model, view, controller, gui, net, utilities.
+
+- Per i componenti è stato adottato il pattern MVC. Ad esempio: modello (Tank), vista (TankView), controller (TankController) e sono separati.
+
+- La gerarchia delle classi che fanno parte del package component è stata strutturata per avere dei componenti pronti da utilizzare nel gioco.
+
+- Ogni classe sceglie come inizializzare i campi. E stato creato un metodo che inizializza da file di proprietà (standard), ma è possibile
+inizializzare questi campi, caricando i valori da diverse fonti.
+
+- Esiste una classe "Utility" con metodi statici, che è stata creata per fornire uno strumento di debbugging al programmatore.
+
+- Due classi implementate secondo il pattern "Singleton" si occupano della gestione delle immagini e del suono, esse sono: "ImageLoader" e 
+"SoundManager"
+
+- Ho creato una classe con metodi statici che gestisce il gioco "TankBattleGame".
+
+- Ho utilizzato una classe che effettua delle trasformazioni sull'immagine, sia per il colore che per la direzione.
+Questo permette di caricare una sola immagine e trasformarla a piacimento in modo da non sovraccaricare la memoria centrale e rendere
+il gioco più snello
+
+- Per i componenti ho dovuto utilizzare layer sovrapposti, perché quando si effettuano delle trasformazioni sul'oggetto Grapchis2D,
+se avessi utilizzato un unico layer, tutti i componenti presenti nel campo di gioco visibile ne avrebbero risentito, in quanto le trasformazioni
+vengono applicate a tutto il "clip" e non solo all'oggetto in questione.
+
+- Le costanti delle classi le ho importate staticamente in modo da non avere nomi lunghi (piccolezza).
+
+- Il collider dovrà controllare gli spostamenti di tutti gli oggetti in movimento, in slot di tempo discreti.
+
+- Tutte le classi alla fine della gerarchia le ho dichiarate "final" in modo da non essere più estese e in modo da permettere alla JVM
+una gestione più efficiente, visto che non deve creare le strutture dati necessarie al binding dinamico dei metodi.
+
+- Ho creato una doppia interfaccia grafica, e queste due interfaccie grafiche possono essere intercambiate.
+
+- Ho creato due classi di utilità che salvano rispettivamente le proprietà della GUI e del gioco e le rendono persistenti.
+
+- E' stata creata un'unica classe astratta Controller, che implementa i listener disponibili. Estendendo questa classe è possibile creare
+il controller desiderato.
+
+- Ho utilizzato la programmazione generica nell'interfaccia "Dispathable"
+
+------------------------------------------------------- DOCUMENTAZIONE ------------------------------------------------
+- Ogni campo, metodo, classe di ogni file sorgente è stato documentato. Inoltre ho documentato i package ed ho inserito un commento panoramico
+di tutti i file sorgente, raggiungibile cliccando su "overview".
+
+- Il gioco è concesso sotto licenza GPL, ogni file contiene l'intestazione standard.
+
+NOTA: la documentazione è in fase di ultimazione.
+------------------------------------------------------------------------------------------------------------------------
+
+ci sono 114 classi

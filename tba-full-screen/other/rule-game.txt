@@ -1,0 +1,74 @@
+-------------------------------------------------- PROPRIETA' DEL TANK ------------------------------------------------------------
+Il tank ha di default 120 punti, ma può aumentare la propria energia mediante dei bonus.
+
+---------------------------------------------------------- DIFESA ------------------------------------------------------------------
+
+1) visibilità:
+	a) il tank può essere invisibile per un determinato periodo di tempo n;
+	b) l'invisibilità può essere acquisita più volte senza nessuna limitazione;
+	c) quando il tank è invisibile può essere comunque colpito ma non può usufruire dei bonus che agiscono sull'energia ne sulla vita;
+	d) se passa sui bonus dell'energia e della vita, rimangono intatti;
+
+2) corazza:
+	a) il tank può acquisire la corazza per un determinato periodo di tempo n;
+	b) la corazza può essere acquisita più volte senza nessuna limitazione;
+	c) quando il tank ha la corazza, l'energia non può essere decrementata;
+	d) se passa sui bonus energia non li acquisisce ma li fa scomparire, togliendoli anche all'avversario;
+	e) se passa sul bonus vita non lo acquisisce e lo lascia intatto, quindi l'avversario ne può usufruire;
+
+3) life bonus:
+	a) il tank può avere una seconda vita;
+	b) allo scadere dell'energia, il tank riacquisisce 120 punti, gli ultimi;
+	c) il bonus vita compare una sola volta durante il livello;
+	
+4) regole globali:
+	a) durante l'invisibilità, il tank non può acquisire la corazza ne la vita (come dalla regola precedente)
+	b) se il tank ha la corazza, non può avere contemporaneamente l'invisibilità.
+	c
+	c) se ho la vita: posso acquisire l'invisibilità ma non la corazza
+
+4) increment energy bonus:
+	a) il tank può incrementare la propria energia fino a raggiungere la soglia dei 120 punti;
+	b) questo bonus compare ad ogni livello e in quantità variabile e limitata, in base alla difficoltà;
+
+5) double energy bonus: 
+	a) il tank può raddoppiare la propria energia;
+	b) questo bonus compare per al più due volte nel livello;
+
+NOTA 1: La presenza e l'entità di questi bonus vengono decisi dal gioco.
+NOTA 2: una proprietà esclude l'altra, non si possono avere contemporaneamente.
+
+-------------------------------------------------- ATTACCO ------------------------------------------------------------
+
+1) Explosive - gli esplosivi possono essere di 3 tipi: AntitankMine, Mine, Grenade
+	a) AntitankMine: la mina anticarro toglie 120 punti - 1 disponibile
+	b) Mine: la mina normale toglie 40 punti - 3 disponibili
+	c) Grenade: la granata toglie 30 punti - 4 disponibili
+
+2) Bullet - i proiettili possono essere di 3 tipi: FullMetalJacket, UraniumBullet, LeadBullet
+	a) FullMetalJacket: questo proiettile toglie 12 punti - questi proiettili bisogna prenderli dalla mappa
+	b) UraniumBullet: questo proiettile toglie 8 punti - questi proiettili bisogna prenderli dalla mappa
+	c) LeadBullet: questo proiettile toglie 6 punti - questo proiettile è sempre presente nel tank
+	
+	
+	
+---------------------------------------------------- NEMICI NEL SINGLE PLAYER -------------------------------------------------------------
+
+Ci sono due tipi di intelligenze:
+
+1) Il nemico non ha una visione globale, quindi se ci sono i muretti d'avanti non può vederti. Se il nemico si trova in un corridoio libero da ostacoli e il carro armato gli viene d'avanti, allora il nemico spara.
+
+2) Il nemico ha una visione globale e sa dove ti trovi in ogni istante. La sua intelligenza è creata in modo tale da inseguirti sempre e cercare il percorso migliore. Come ti ha a tiro spara.
+
+--------------------------------------------------------- GOAL ------------------------------------------------
+
+The game's aim is to defend the base against the enemy. In the multiplayer mode game, we can play:
+
+a) Free For All - all vs. all
+b) Team - teamwork
+
+The terms of game are:
+
+a) death match
+b) conquer and destroy
+c) capture the flag (?) maybe

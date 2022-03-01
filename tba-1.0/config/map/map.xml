@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="map.css"?>
+<!DOCTYPE tank-battle SYSTEM "map.dtd">
+
+<!--
+ Copyright © 2008 Simone Spaccarotella
+ 
+ This file is part of "Tank Battle Arena" game.
+ 
+ Tank Battle is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ Tank Battle Arena is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with Tank Battle.  If not, see <http://www.gnu.org/licenses/>. 
+ -->
+ 
+<tank-battle>
+	<map id="empty">
+	</map>
+	<map id="horse" src-image="resources/images/wall/brickWall-0.png" width="75" height="75">
+		<wall x="100" y="100" />
+		<wall x="100" y="160" />
+		<wall x="100" y="220" />
+		<wall x="100" y="280" />
+		<wall x="100" y="340" />
+		<wall x="100" y="400" />
+		<wall x="100" y="460" />
+		<wall x="100" y="520" />
+		
+		<wall x="100" y="100" />
+		<wall x="160" y="100" />
+		<wall x="220" y="100" />
+		<wall x="280" y="100" />
+		<wall x="340" y="100" />
+		<wall x="400" y="100" />
+		<wall x="460" y="100" />
+		<wall x="520" y="100" />
+		<wall x="580" y="100" />
+		<wall x="640" y="100" />
+		<wall x="700" y="100" />
+		
+		<wall x="700" y="100" />
+		<wall x="700" y="160" />
+		<wall x="700" y="220" />
+		<wall x="700" y="280" />
+		<wall x="700" y="340" />
+		<wall x="700" y="400" />
+		<wall x="700" y="460" />
+		<wall x="700" y="520" />
+	</map>
+	<map id="parallel" src-image="resources/images/wall/brickWall-0.png" width="75" height="75">
+		<wall x="100" y="100" />
+		<wall x="100" y="160" />
+		<wall x="100" y="220" />
+		<wall x="100" y="280" />
+		<wall x="100" y="340"/>
+		<wall x="100" y="400"/>
+		<wall x="300" y="100" />
+		<wall x="300" y="160" />
+		<wall x="300" y="220" />
+		<wall x="300" y="280" />
+		<wall x="300" y="340"/>
+		<wall x="300" y="400"/>
+		<wall x="500" y="100" />
+		<wall x="500" y="160" />
+		<wall x="500" y="220" />
+		<wall x="500" y="280" />
+		<wall x="500" y="340"/>
+		<wall x="500" y="400"/>
+		<wall x="700" y="100" />
+		<wall x="700" y="160" />
+		<wall x="700" y="220" />
+		<wall x="700" y="280" />
+		<wall x="700" y="340"/>
+		<wall x="700" y="400"/>
+	</map>
+	<map id="ai" src-image="resources/images/wall/brickWall-0.png" width="75" height="75">
+		<wall x="100" y="100" />
+		<wall x="100" y="160" />
+		<wall x="100" y="220" />
+		<wall x="100" y="280" />
+		<wall x="100" y="340" />
+		<wall x="100" y="400" />
+		<wall x="100" y="460" />
+		
+		<wall x="100" y="100" />
+		<wall x="160" y="100" />
+		<wall x="220" y="100" />
+		<wall x="280" y="100" />
+		<wall x="340" y="100" />
+		<wall x="400" y="100" />
+		<wall x="460" y="100" />
+		<wall x="520" y="100" />
+		<wall x="580" y="100" />
+		<wall x="640" y="100" />
+		<wall x="700" y="100" />
+		
+		<wall x="700" y="100" />
+		<wall x="700" y="160" />
+		<wall x="700" y="220" />
+		<wall x="700" y="280" />
+		<wall x="700" y="340" />
+		<wall x="700" y="400" />
+		<wall x="700" y="460" />
+		
+		<wall x="280" y="280"/>
+		<wall x="340" y="280"/>
+		<wall x="400" y="280"/>
+		<wall x="460" y="280"/>
+		<wall x="520" y="280"/>
+		
+		<wall x="1000" y="100" />
+		<wall x="1000" y="160" />
+		<wall x="1000" y="220" />
+		<wall x="1000" y="280" />
+		<wall x="1000" y="340" />
+		<wall x="1000" y="400" />
+		<wall x="1000" y="460" />
+	</map>
+	<map id="chess" src-image="resources/images/wall/brickWall-0.png" width="75" height="75">
+		<wall x="100" y="100"/>
+		<wall x="100" y="250"/>
+		<wall x="100" y="400"/>
+		
+		<wall x="250" y="100"/>
+		<wall x="250" y="250"/>
+		<wall x="250" y="400"/>
+		
+		<wall x="400" y="100"/>
+		<wall x="400" y="250"/>
+		<wall x="400" y="400"/>
+		
+		<wall x="550" y="100"/>
+		<wall x="550" y="250"/>
+		<wall x="550" y="400"/>
+		
+		<wall x="700" y="100"/>
+		<wall x="700" y="250"/>
+		<wall x="700" y="400"/>
+		
+		<wall x="850" y="100"/>
+		<wall x="850" y="250"/>
+		<wall x="850" y="400"/>
+	</map>
+</tank-battle>

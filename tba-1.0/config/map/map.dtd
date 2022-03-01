@@ -1,0 +1,13 @@
+<!ELEMENT tank-battle (map*)>
+<!ELEMENT map (wall*)>
+<!ATTLIST map
+	id ID #REQUIRED
+	src-image CDATA #IMPLIED
+	width CDATA #IMPLIED
+	height CDATA #IMPLIED
+>
+<!ELEMENT wall EMPTY>
+<!ATTLIST wall
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+>

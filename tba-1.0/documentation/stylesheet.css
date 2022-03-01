@@ -1,0 +1,53 @@
+BODY {
+	font-family: serif;
+	font-size: 11pt;
+}
+
+div.gui-image {
+	border-style: ridge;
+	border-color: #FFFFCC;
+}
+
+div.gui-image:HOVER {
+	border-style: groove;
+	border-color: black;
+}
+
+p.gui-description {
+	text-align: center;
+	font-family: arial;
+	background: #FFFFCC;	
+}
+
+p.gui-description:HOVER {
+	background: black;
+	color: #FFFFCC;
+}
+
+A.linkable {
+	font-family: serif;
+	text-decoration: none;
+}
+
+A.linkable:ACTIVE {
+	color: blue;
+}
+
+A.linkable:VISITED {
+	color: blue;
+}
+
+A.linkable:HOVER {
+	color: black;
+}
+
+A.title {
+	font-size: 18pt;
+	font-family: serif;
+	font-weight: bold;
+}
+
+p.description {
+	font-size: 11pt;
+	text-align: justify;
+}

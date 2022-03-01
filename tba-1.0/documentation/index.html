@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+		<title>Tank Battle Arena - the tank war</title>
+	</head>
+	
+	<body>
+		<!-- /////////////// INTESTAZIONE DELLA PAGINA /////////////// -->
+		
+		<h1>Tank Battle Arena<br /><small>the Tank war</small></h1>
+		
+		<hr />
+		
+		<p>
+			Current release: <a class="linkable" href="../TankBattleArena-1.0.jar"><strong>1.0 - 2009-03-21</strong></a>
+		</p>
+		
+		<!-- L'indice della relazione -->
+		
+		<hr />
+		
+		<a class="title" name="index">Index</a>
+		
+		<ol>
+			<li><a class="linkable" href="#gui">G.U.I.</a></li>
+			<li><a class="linkable" href="#grafica2D">Grafica 2D</a></li>
+			<li><a class="linkable" href="#diagrammi">Diagrammi</a></li>
+			<li><a class="linkable" href="../doc/index.html">API</a></li>
+		</ol>
+		
+		<!-- in questa sezione viene trattata la gestione dell'interfaccia grafica -->
+		
+		<hr />
+		
+		<a class="title" name="gui">G.U.I.</a>
+		<small><a class="linkable" href="index.html">[index]</a></small>
+		<small><a class="linkable" href="#grafica2D">[next-&gt;]</a></small>
+		
+		<p class="description">
+			L'interfaccia grafica è composta da un'unica finestra centrale dalla quale è possibile gestire
+			il gioco nella sua totalità. Per ogni finestra sono state utilizzate due classi separate, una 
+			che implementa la finestra vera e propria, e l'altra che implementa il pannello, con all'interno
+			tutti i suoi componenti. Nei casi di pannelli più complessi, sono state implementate più di una classe
+			che gestiscono ognuna una parte del pannello. 
+		</p>
+		<p class="description">
+			All'inizializzazione del gioco, viene acquisita la configurazione grafica di default, che viene poi
+			settata ad ogni nuova finestra. Alcune finestre sono delle <code>JDialog</code> modali, come per
+			la finestra che visualizza i credits e la licenza GPL. Le altre invece ereditano da <code>JFrame</code>
+			ed utilizzano sempre un riferimento alla finestra principale. Questo riferimento non è memorizzato in ogni
+			classe, ma viene acquisito dal controller della GUI.
+		</p>
+		<p class="description">
+			Il controller della GUI non è nient'altro che un ascoltatore che eredita da una classe <strong>Adapter</strong> astratta, la
+			quale implementa a corpo vuoto, tutti i metodi delle interfaccie che implementa. Le interfaccie implementate
+			sono gli ascoltatori dei relativi eventi che possono essere generati. In questo modo, il controller sovrascrive
+			solo i metodi di interesse senza appesantire troppo il codice con metodi inutili.
+		</p>
+		<p class="description">
+			Ogni volta che viene creata una nuova finestra, vengono settate delle impostazioni standard, uguali per tutte. L'icona, la prima parte
+			del titolo e la configurazione grafica. Il titolo è composto dal nome del gioco più una seconda parte che descrive la finestra corrente
+			quest'ultima separata da una <code>pipe (|)</code> dalla prima. La prima parte del titolo viene acquisita dal titolo della finestra principale, in 
+			modo che, se dovesse cambiare, cambierebbe per tutto il gioco.
+		</p>
+		<p class="description">
+			In <a class="linkable" href="gui.html">questa sezione</a> &egrave; possibile vedere gli screenshot della GUI.
+		</p>
+		
+		<!-- in questa sezione viene trattata la gestione della grafica 2D -->
+		
+		<hr />
+		
+		<a class="title" name="grafica2D">Grafica 2D</a>
+		<small><a class="linkable" href="#gui">[&lt;-prev]</a></small>
+		<small><a class="linkable" href="index.html">[index]</a></small>
+		<small><a class="linkable" href="#diagrammi">[next-&gt;]</a></small>
+		
+		<p class="description">
+			Una volta avviato il <code>GamePanel</code>, ci troviamo di fronte al gioco vero e proprio.
+			Il pannello di gioco ha un <code>GridBagLayout</code> a cui &egrave; stato settato opportunamente
+			il <code>constraint</code> in modo da avere un pannello superiore che occupa una superficie del 10%
+			rispetto al totale, ed un pannello inferiore che occupa il restante 90%. Il pannello superiore rappresenta
+			il pannello di stato, mentre quello inferiore, il pannello di gioco.
+		</p>
+		<p class="description">
+			Il pannello di stato &egrave; un pannello con un <code>GridLayout</code>, in modo da avere due sezioni
+			di pari dimensioni. La parte a destra visualizza un banner e due label, che corrispondono al nome del giocatore
+			e all'energia del tank, il pannello ha un <code>FlowLayout</code> standard. La parte a sinistra invece &egrave; 
+			un pannello con un <code>BorderLayout</code> e contiene la chat, per poter comunicare con gli altri giocatori.
+			Infatti al centro del pannello &egrave; stato inserito un ulteriore pannello (un <code>JScrollPane</code>) a cui
+			viene passato una <code>JTextArea</code> tramite il costruttore, questo permette di avere una area di testo scrollabile.
+			Quest'area di testo non &egrave; editabile ma serve solo a visualizzare i messaggi ricevuti dagli altri giocatori e quelli inviati.
+			Nella parte sud del pannello infine, &egrave; presente un campo di testo in cui &egrave; possibile scrivere i messaggi
+			che andranno poi sulla rete e verranno visualizzati dall'area di testo, mentre a nord, ovest e ad est sono stati piazzati
+			dei semplici pannelli che fanno da cornice. Tutti i componenti sulla cornice sono trasparenti, e permettono di visualizzare
+			il banner disegnato sul pannello sottostante.
+		</p>
+		<p class="description">
+			Il pannello di gioco invece &egrave; una classe che eredita da <code>JLayeredPane</code>, quindi un pannello che permette la visualizzazione
+			di più pannelli sovrapposti. Questo perché ogni componente del gioco, ha la sua relativa vista, che permette di visualizzare lo stato a video.
+			Questa classe che implementa la vista del componente non &egrave; nient'altro che una classe che eredita da <code>JPanel</code>, trasparente,
+			in modo da permettere la visualizzazione dei pannelli sottostanti. Ogni pannello disegna lo stato del proprio modello, per esempio, la vista del
+			<code>Tank</code> visualizza l'immagine del Tank, la sua dimensione e posizione, oltre naturalmente alla rotazione del corpo e della torretta, e
+			la visualizzazione dei proiettili.
+		</p>
+		<p class="description">
+			Per quanto riguarda il <code>Tank</code>, vengono caricate due sole immagini, quella del corpo e quella della torretta, le quali vengono trasformate
+			e disegnate mediante i metodi della classe <code>Graphics2D</code>. In questo modo &egrave; possibile roteare l'immagine, senza dover caricare tante
+			<code>sprite</code> per quante posizioni bisogna fargli assumere, ed è possibile dare l'effetto trasparenza. Inoltre con una classe "ad-hoc" (<code>ColorFilter</code>) &egrave; possibile cambiare
+			la tonalit&agrave; del colore all'immagine.
+		</p>
+		
+		<!-- in questa sezione ci sono i diagrammi fatti in UML 2.0 -->
+		
+		<hr />
+		
+		<a class="title" name="diagrammi">Diagrammi</a>
+		<small><a class="linkable" href="#grafica2D">[&lt;-prev]</a></small>
+		<small><a class="linkable" href="index.html">[index]</a></small>
+		
+		<br /><br />
+		
+		Diagrammi delle classi:
+		<ul>
+			<li><a href="componentClassDiagram.html">tankBattle.model.component</a></li>
+			<li><a href="viewClassDiagram.html">tankBattle.view</a><br /></li>
+			<li><a href="modelClassDiagram.html">tankBattle.model</a><br /></li>
+		</ul>
+		
+		Protocollo di rete:
+		<ul>
+			<li><a href="handshakeNetProtocol.html">autorilevamento del server</a></li>
+			<li><a href="netSequence.html">schema di comunicazione client/server</a></li>
+			<li><a href="gameNetProtocol.html">schema architetturale del protocollo di gioco</a></li>
+		</ul>
+		
+		Interfaccia grafica:
+		<ul>
+			<li><a href="guiUseCase.html">diagramma dei casi d'uso della GUI</a></li>
+			<li><a href="guiScheme.html">diagramma di stato della GUI</a></li>
+		</ul>
+		
+		<hr />
+		
+	</body>
+</html>

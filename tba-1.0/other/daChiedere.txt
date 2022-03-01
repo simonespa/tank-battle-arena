@@ -1,0 +1,1 @@
+- Ci sono dei problemi con la validazione del file XML. Perché non funziona bene con "EMPTY"?

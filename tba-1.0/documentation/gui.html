@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+		<title>Tank Battle Arena - the tank war | gui</title>
+	</head>
+	<body>
+		<hr />
+		
+		<a class="title" name="gui">G.U.I.</a>
+		<small><a class="linkable" href="index.html">[index]</a></small>
+		
+		<p class="gui-description">
+			Per quanto riguarda l'interfaccia grafica sono stati utilizzati i componenti swing.
+			La logica di funzionamento consiste in una finestra principale
+		</p>
+		<div class="gui-image">
+			<img src="images/mainW.png" alt="" />
+		</div>
+		
+		<p class="gui-description">
+			dalla quale è possibile gestire il gioco mediante dei men&ugrave;. &Egrave; possibile
+			far partire il gioco sia in modalit&agrave; <strong>Server</strong> che in modalit&agrave;
+			<strong>Client</strong>.
+		</p>
+		<div class="gui-image">
+			<img src="images/mainW-game.png" alt="" />
+			<img src="images/mainW-newGame.png" alt="" />
+		</div>
+	
+		<p class="gui-description">
+			Per far partire il <strong>Server</strong>, bisogna cliccare su "<code>Start server</code>"
+		</p>
+		<div class="gui-image">
+			<img src="images/mainW-startServer.png" alt="" />
+			<img src="images/startServerW.PNG" alt="" />
+		</div>
+		
+		<p class="gui-description">
+			e comparir&agrave; una nuova finestra da cui &egrave; possibile scegliere le impostazioni di
+			gioco, come il tipo (in team o da soli), la modalit&agrave; (death match o score match) e la mappa,
+			ed inoltre il nome ed il colore del Tank
+		</p>
+		<div class="gui-image">
+			<img src="images/startServerW-selectType.png" alt="" />
+			<img src="images/startServerW-selectMode.png" alt="" />
+			<img src="images/startServerW-selectMap.png" alt="" />
+			<img src="images/startServerW-choose.png" alt="" />
+			<img src="images/chooseColor.png" alt="" />
+		</div>
+		
+		<p class="gui-description">
+			Per far partire il <strong>Client</strong>, bisogna cliccare su "<code>Join server</code>"
+		</p>
+		<div class="gui-image">
+			<img src="images/mainW.png" alt="" />
+			<img src="images/mainW-joinServer.png" alt="" />
+		</div>
+		
+		<p class="gui-description">
+			comparir&agrave; una finestra di dialogo in cui &egrave; possibile scegliere il nome del tank ed il colore.
+			Per quanto riguarda gli altri parametri di gioco, non bisogna settarli, perch&eacute; verranno
+			passati dal server a cui ci si aggancia.
+		</p>
+		<div class="gui-image">
+			<img src="images/chooseTankW.png" alt="" />
+		</div>
+		
+		<p class="gui-description">
+			a questo punto si avvia lo scanner di rete, che va in cerca di eventuali server
+			pronti a ricevere. Se ce ne fosse qualcuno, lo scanner lo rileverebbe e visualizzerebbe il risultato
+			nella tabella (come mostrato in figura). Se dopo alcuni secondi (dipende dalla latenza della rete
+			a cui si &egrave; connessi) non dovesse comparire nulla, potete cliccare su <code>refresh</code>
+			in modo da riavviare lo scanner di rete, per un'altra scansione, in cerca del server. Una volta
+			trovato il server (potrebbero essercene pi&ugrave; di uno), basta fare doppio click sulla riga
+			nella tabella, ed il client si connette automaticamente, facendo partire il gioco. 
+		</p>
+		<div class="gui-image">
+			<img src="images/joinServerW.png" alt="" />	
+		</div>
+		
+		<p class="gui-description">
+			Una volta partito il gioco, ci si trova nella mappa, a prescindere dalla modalit&agrave;
+			prescelta (<code>client</code> o <code>server</code>). Le possibili mappe sono 4 e sono:
+		</p>
+		
+		<br />
+		
+		<p class="gui-description">
+			<strong>DESERT</strong>
+		</p>
+		<div class="gui-image">
+			<img src="images/desert.png" alt="" />	
+		</div>
+		
+		<p class="gui-description">
+			<strong>GLACIER</strong>
+		</p>
+		<div class="gui-image">
+			<img src="images/glacier.png" alt="" />	
+		</div>
+		
+		<p class="gui-description">
+			<strong>GRASSLAND</strong>
+		</p>
+		<div class="gui-image">
+			<img src="images/grassland.png" alt="" />	
+		</div>
+		
+		<p class="gui-description">
+			<strong>METAL ARENA</strong>
+		</p>
+		<div class="gui-image">
+			<img src="images/metalArena.png" alt="" />	
+		</div>
+		
+		<p class="gui-description">
+			Dal gioco &egrave; possibile uscire, premendo il tasto <code>Esc(ape)</code>. Si va in una
+			finestra di opzioni, dalla quale &egrave; possibile settare sia la musica che gli effetti sonori
+			ad ON/OFF, e da cui &egrave; possibile ritornare al gioco, oppure alla finestra principale (come mostrato in figura).
+		</p>
+		<div class="gui-image">
+			<img src="images/option.png" alt="" />
+			<img src="images/leaveGame.png" alt="" />
+			<img src="images/mainW.png" alt="" />
+		</div>
+		
+		<p class="gui-description">
+			Dal men&ugrave; principale, si possono settare anche alcune impostazioni come il
+			<code>debug mode</code> ed il <code>look and feel</code>. &Egrave; anche possibile
+			settare la musica e gli effetti sonori ad ON/OFF, oppure passare alla modalit&agrave;
+			<code>Full Screen</code>
+		</p>
+		<div class="gui-image">
+			<img src="images/mainW-option.png" alt="" />
+			<img src="images/mainW-debug.png" alt="" />
+			<img src="images/mainW-LaF.png" alt="" />	
+		</div>
+		
+		<p class="gui-description">
+			Infine è possibile accedere ad una finestra di dialogo che visualizza la licenza di
+			utilizzo GNU/GPL ed una piccola animazione con i credit del gioco.
+		</p>
+		<div class="gui-image">
+			<img src="images/mainW-help.png" alt="" />
+			<img src="images/credits.png" alt="" />
+			<img src="images/gpl.png" alt="" />
+		</div>
+		
+		<br />
+		
+		<small><a class="linkable" href="index.html">[index]</a></small>
+	</body>
+</html>
